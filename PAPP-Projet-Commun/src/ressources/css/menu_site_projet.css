@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+body {
+    background-image:url(../images/feuil.jpg);
+    margin:0;
+    background-size: cover;
+}
+
+/* MENU SITE */
+#br {
+    text-decoration: none;
+    color: black;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.Deconnexion {
+    background-color: #569A73;
+    width: 140px;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    transform: translateX(0%);
+}
+#DeconnexionActive {
+    transition: all 0.2s ease-in-out;
+    transform: translateX(100%);
+}
+#menuTurn {
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    right:-70px;
+    top: 5px;
+}
+#decoTxtTurn {
+    margin-top: 100px;
+}
+.decotxt {
+    font-family: 'Lexend Deca', sans-serif;
+    color: white;
+    margin-top: 2px;
+}
+.vert {
+    background-color: #569A73;
+    display: flex;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 25px;
+}
+a {
+    text-decoration: none;
+}
+.card{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+    
+}
+.title-card{
+    width: 100%;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+.img-card{
+    width: 100%;
+    height: 80px;
+    margin-top: -20px;
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+}
+
+.img{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+}
+
+
+.crayon{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.croix{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.img-crayon{
+    max-width: 10px;
+    max-height: 10px;
+    min-width: 10px;
+    min-height: 10px;
+    object-fit: cover;
+}
+
+.img-croix{
+    min-width: 15px;
+    min-height: 15px;
+    max-width: 15px;
+    max-height: 15px;
+    object-fit: cover;
+}
+
+
+#title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+}
+.menuRight{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+}
+#pageTitle {
+    color: white;
+    text-decoration: underline;
+    font-family: 'Lexend Deca', sans-serif;
+    z-index: 2;
+}
+.menuLeft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+#menuContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.mini {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.miniActive {
+    width: 200px;
+}
+.menuIcon {
+    position: absolute;
+    display: flex;
+    background-color:#569A73;
+    width: 50px;
+    transform: translateX(100%);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    gap: 10px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+#histoire {
+    width: 30px;
+    height: 50px;
+}
+#credits {
+    
+    width: 40px;
+    
+    height: 40px;
+}
+.menuIconActive{
+    transform: translateX(0%);
+    width: 200px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+.menuItem{
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menuItemImage{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+}
+.menuItemButton{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menuItemButtonImage{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+}
+.menuBarreIconContainer{
+    background-color:#569A73 ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.menuBarre {
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+.menuBarreActive{
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+}
+.plante {
+    background-color: white;
+    width: 220px; /* Reduced width to save space */
+    height: 250px;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+    font-size: 18px; /* Slightly smaller font size */
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 10px 5px; /* Adjusted margin to avoid overflow */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents content overflow */
+}
+#desc .hover{
+    color: black;
+    text-decoration: none;
+}
+#desc{
+    color: black;
+    text-decoration: none;
+}
+/* FIN MENU SITE */

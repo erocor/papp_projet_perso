@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+    margin-top: 15%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-image: url("../images/macro-wallpaper-preview.jpg");
+    background-size: cover;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #63997a; 
+    border-radius: 15px;
+    border: 4px solid;
+    border-color: #8db1a0;
+    width: 80vw;
+    gap: 40px; 
+    max-width: 360px;
+    height: 60vh; 
+    max-height: 400px;
+    flex: content;
+
+}
+.connection{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 1px;
+    text-shadow: #4E785F 2px 2px;
+
+    
+
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -30px;
+    padding-bottom: 20px;
+}
+
+.femail{
+    width: 100%;
+    background-color: #8DB1A0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+    cursor: pointer;
+    outline: none;
+
+}
+.fpass{
+    width: 100%;
+    background-color: #8DB1A0;
+    color: white; /* This affects the input text color */
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-shadow: none; /* Ensures text input does not have shadow */
+    font-family: 'Lexend Deca', sans-serif;
+    box-shadow: none;
+    outline: none; /* Ensure no box shadow for input box */
+    
+    
+
+}
+
+.enter{
+    background-color: #15834F;
+    font-size: 20px;
+    border-radius: 17px;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 8px 60px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: #4E785F 2px 2px;
+    margin-left: 32px;
+
+}
+::placeholder {
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: #4E785F 2px 2px;
+  }
+.enterasnonadmin{
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-left: 45px;
+    color: white;
+}
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+    font-weight: bold;
+}
+
+#Retour{
+    background-color: #15834F;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    border-radius: 10px;
+}

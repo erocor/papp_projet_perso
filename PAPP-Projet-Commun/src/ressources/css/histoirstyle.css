@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+h1{
+    color: white;
+    font-size:  45px; 
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+
+}
+body{
+    background-image:url(../images/tableauVert.PNG);
+    min-width: 1280px;
+    min-height: 800px;
+    margin: 0;
+    background-size: cover;
+
+}
+p{
+    color: white;
+    font-size: 39px;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+}
+.menuLeft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+#menuContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.mini {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.miniActive {
+    width: 200px;
+}
+.menuIcon {
+    position: absolute;
+    display: flex;
+    background-color:#09663f;
+    width: 50px;
+    transform: translateX(100%);
+    opacity: 0;
+    top: 0;
+    left: 0;
+    gap: 2px;
+    z-index: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+#histoire {
+    width: 30px;
+    height: 50px;
+}
+#credits {
+    
+    width: 40px;
+    
+    height: 40px;
+}
+#House {
+    width: 25px;
+    height: 40px;
+}
+.menuIconActive{
+    transform: translateX(0%);
+    width: 200px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+.menuItem{
+    width: 50px;
+    height: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menuItemImage{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+}
+.menuItemButton{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menuItemButtonImage{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+}
+.menuBarreIconContainer{
+    background-color:#13915c ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.menuBarre {
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+    z-index: 2;
+}
+.menuBarreActive{
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+}
