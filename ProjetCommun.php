@@ -79,7 +79,7 @@ Ce projet a permis de travailler en équipe et de créer un site utile, bien int
 
 </div>
 
-<button id="ProjetCommun"><a href="PAPP-Projet-Commun/src/html_php/index.php">Entrée dans le site projet commun</a></button>
+<button id="ProjetCommun"><a href="https://cofop.vimodev.ch">Entrée dans le site projet commun</a></button>
 
 <div class="Bloc_3">
 Polymécanique
