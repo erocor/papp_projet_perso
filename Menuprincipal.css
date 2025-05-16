@@ -1,0 +1,572 @@
+/* ---------- Style Général ---------- */
+.Text {
+    background-color: rgb(240, 240, 240);
+    border-radius: 0px 30px 0px 30px;
+    height: 550px;
+    width: 650px;
+    align-items: center;
+    text-align: center;
+}
+
+#Titre {
+    font-family: 'BankGothic Md BT';
+}
+
+/* ---------- Positionnement des éléments ---------- */
+#Position {
+    min-height: 100vh;
+    min-width: 100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Courbe {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 0% 0% 50% 50%;
+}
+/* ---------- Bouton retour ---------- */
+.BoutonContainer {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px; /* espace entre le logo et le bouton */
+}
+
+.bouton {
+    background: linear-gradient(120deg, darkblue, navy);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    left: 10px;
+  }
+  
+  /* Animation train qui passe */
+  .bouton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, #00f, #0ff, #00f);
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+  
+  /* Texte au-dessus de l'effet */
+  .bouton span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Survol : animation + zoom */
+  .bouton:hover::before {
+    left: 100%;
+  }
+  
+  .bouton:hover {
+    transform: scale(1.2);
+  }
+  
+
+/* ---------- Menu Barre ---------- */
+#menu {
+    position: fixed;
+    top: 0px;
+    right: 0px; /* Aligne le menu à droite */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Place les éléments à droite */
+    width: 100%;
+}
+
+.MenuLienBarre {
+    opacity: 0;
+    background-color: darkblue;
+    pointer-events: none; /* Empêche les clics quand invisible */
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+}
+.MenuLienBarre.MenuLienActive {
+    opacity: 1;
+    pointer-events: auto; /* Autorise les clics quand visible */
+    transform: translateY(10px);
+}
+.MenuLienActive {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.MenuLien {
+    width: 100%;
+    height: 50px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(240, 240, 240);
+    list-style: none;
+    margin: 0px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.MenuLien:hover {
+    color: darkblue;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+}
+
+.MenuItemButton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuBarreContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 20; /* Assure-toi que l'icône soit au-dessus des autres éléments */
+}
+
+.MenuBarre {
+    position: relative;
+    top: 0;
+    right: 0; /* Aligne l'icône de la barre à droite */
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
+
+.MenuBarreActive {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+}
+
+.Menu {
+    width: 400px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Place le menu à droite */
+    align-items: center;
+    position: relative;
+}
+
+/* Animation pour la fermeture du menu (opacité et translation vers le haut) */
+.MenuLienClosing {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+/* Alignement des éléments à droite de la page */
+#MenuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; /* Alignement à droite */
+    position: absolute;
+    top: 0;
+    right: 0; /* Coller le menu à droite */
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0px;
+    right: 0%;
+}
+
+/* ---------- Liens de Activitées ---------- */
+#ActivitéLien {
+    color: black;
+    padding: 40px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+#Activitélien{
+    background-color: gray;
+}
+
+/* ---------- Liens de connexion ---------- */
+#ConnexionLien {
+    margin-top: auto;
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* ---------- Gérer l'apparence des étoiles ---------- */
+.stars {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-content: left;
+}
+
+.stars span {
+    color: white; /* Couleur de base (gris clair) */
+    transition: color 0.5s ease;
+}
+
+.stars span.selected {
+    color: gold; /* Couleur pour l'étoile sélectionnée */
+}
+
+.stars span:hover,
+.stars span.hover {
+    color: gold; /* Couleur lors du survol */
+}
+
+/* ---------- Le formulaire d'avis ---------- */
+.Block_Avis {
+    background-color: darkblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Aligner à gauche */
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.Block_Avis h2 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.Block_Avis textarea {
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+.Block_Avis input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    margin-bottom: 15px;
+}
+
+.Block_Avis button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: white;
+    color: darkblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.Block_Avis button:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+/* ---------- Affichage des étoiles (plus détaillé) ---------- */
+.etoiles {
+    display: flex;
+    justify-content: left;
+    position: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.etoiles span {
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 5px;
+}
+
+.etoiles span:hover {
+    color: gold;
+}
+
+/* ---------- Responsive - Adaptation à des écrans plus petits ---------- */
+@media (max-width: 600px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .left-container,
+    .right-container {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+    .Block_Avis input[type="text"],
+    .Block_Avis textarea {
+        width: 100%;
+    }
+
+    .Block_Avis button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+
+/* ---------- Apparence du footer ---------- */
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+}
+
+
+/* ---------- Affichage des étoiles moyennes ---------- */
+.moyenne_etoiles {
+    font-size: 24px;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.moyenne_etoiles span {
+    display: inline-block;
+    color: gold;
+    font-size: 30px;
+    width: 100%;
+}
+
+/* Section gauche avec pseudo, étoiles et commentaire */
+.left-container {
+    flex: 1;
+    max-width: 875px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(225, 225, 225);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgb(200, 200, 200);
+}
+
+/* Pseudo */
+.left-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    margin-bottom: 15px;
+    left: 0px;
+}
+
+/* Etoiles */
+.left-container .etoiles {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.left-container .etoiles span {
+    font-size: 2.5rem;
+    color: white;
+    margin-right: 5px;
+}
+
+.left-container .etoiles span:hover {
+    color: gold;
+}
+
+/* Commentaire */
+.left-container textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgb(240, 240, 240);
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+/* Bouton */
+.left-container button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: white;
+    color: darkblue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.left-container button:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.avis-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px, solid, black;
+}
+
+.avis-item p {
+    margin: 5px 0;
+}
+/* Conteneur global pour le formulaire et les commentaires */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Ajoute flex-wrap pour gérer les éléments qui déborderont sur les petites résolutions */
+}
+
+.left-container input,
+.left-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.left-container button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #04AA6D;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.left-container button:hover {
+    background-color: #45c69e;
+}
+
+/* Section de droite pour les avis */
+.right-container {
+    flex: 1;
+    max-width: 875px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgb(200, 200, 200);
+    overflow-y: auto; /* Le scroll apparaîtra si le contenu dépasse */
+    height: 500px; /* Limite la hauteur pour avoir un scroll */
+}
+
+/* Style des avis */
+.avis-item {
+    background-color: rgb(215, 215, 215);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(210, 210, 210);
+}
+
+.avis-item p {
+    margin: 5px 0;
+}
+
+/* Style des étoiles */
+.etoiles span {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.5s ease; /* Douce transition sur la couleur */
+}
+
+.etoiles span.selected,
+.etoiles span:hover {
+    color: gold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .form-container {
+        flex-direction: column; /* Empile les éléments sur mobile */
+    }
+
+    .left-container, .right-container {
+        max-width: 100%; /* Laisse chaque bloc occuper toute la largeur */
+    }
+}
+
+#Moyenne_Etoile{
+    color: gold;
+    -webkit-text-stroke: 0.5px black;
+}
+
+#Moyenne_Etoile1{
+    -webkit-text-stroke: 1px black;
+}
+
+#menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%; /* Assure-toi que le menu prend toute la largeur */
+    z-index: 10; /* Pour le mettre au-dessus d'autres éléments */
+}
+
+.MenuLienBarre {
+    position: absolute;
+    top: 100%; /* Ce positionnement pourrait être problématique. Essaie d'ajuster */
+    opacity: 0; /* Si la barre est invisible, vérifie la transition */
+}
+
+.MenuLienBarre.MenuLienActive {
+    opacity: 1; /* Assure-toi que la classe 'MenuLienActive' est bien ajoutée pour rendre visible */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+.Lien_Acivité{
+    text-decoration: underline;
+}

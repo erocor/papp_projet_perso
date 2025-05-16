@@ -1,0 +1,256 @@
+.Text{
+    background-color: rgb(222, 222, 222);
+    border-radius: 0px 30px 0px 30px;
+    height: 575px;
+    width: 575px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#menu{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Courbe {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 0% 0% 50% 50%;
+}
+
+/* ---------- Menu Barre ---------- */
+#menu {
+    position: fixed;
+    top: 0px;
+    right: 0px; /* Aligne le menu à droite */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Place les éléments à droite */
+    width: 100%;
+}
+
+.MenuLienBarre {
+    opacity: 0;
+    background-color: darkblue;
+    pointer-events: none; /* Empêche les clics quand invisible */
+    transform: translateY(-10px);
+    transition: all 0.5s ease-in-out;
+}
+.MenuLienBarre.MenuLienActive {
+    opacity: 1;
+    pointer-events: auto; /* Autorise les clics quand visible */
+    transform: translateY(10px);
+}
+.MenuLienActive {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.MenuLien {
+    width: 100%;
+    height: 50px;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(240, 240, 240);
+    list-style: none;
+    margin: 0px;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.MenuLien:hover {
+    color: darkblue;
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+}
+
+.MenuItemButton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuBarreContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    z-index: 20; /* Assure-toi que l'icône soit au-dessus des autres éléments */
+}
+
+.MenuBarre {
+    position: relative;
+    top: 0;
+    right: 0; /* Aligne l'icône de la barre à droite */
+    width: 50px;
+    height: 50px;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
+}
+
+.MenuBarreActive {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease;
+}
+
+.Menu {
+    width: 400px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Place le menu à droite */
+    align-items: center;
+    position: relative;
+}
+
+/* Animation pour la fermeture du menu (opacité et translation vers le haut) */
+.MenuLienClosing {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+/* Alignement des éléments à droite de la page */
+#MenuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; /* Alignement à droite */
+    position: absolute;
+    top: 0;
+    right: 0; /* Coller le menu à droite */
+}
+
+header {
+    position: fixed;
+    top: 0%;
+    left: 0px;
+    right: 0%;
+}
+
+/* ---------- Liens de Activitées ---------- */
+#ActivitéLien {
+    margin-top: auto;
+    color: black;
+    padding: 40px;
+    text-decoration: black;
+}
+
+/* ---------- Liens de connexion ---------- */
+#ConnexionLien {
+    margin-top: auto;
+    background-color: #04AA6D;
+    color: white;
+}
+/* ---------- Apparence du footer ---------- */
+footer {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    margin-top: 1000px;
+}
+
+#ConnexionLien{
+    margin-top: auto; 
+    background-color: #04AA6D; 
+    color: white; 
+}
+
+.MenuLienBarre {
+    position: absolute;
+    top: 100%; /* Ce positionnement pourrait être problématique. Essaie d'ajuster */
+    opacity: 0; /* Si la barre est invisible, vérifie la transition */
+}
+
+.MenuLienBarre.MenuLienActive {
+    opacity: 1; /* Assure-toi que la classe 'MenuLienActive' est bien ajoutée pour rendre visible */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+}
+
+.Bloc_1{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0px 30px 0px 30px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 400px;
+    top: 200px;
+}
+
+.Bloc_2{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0px 30px 0px 30px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 1000px;
+    top: 400px;
+}
+
+.Bloc_3{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0px 30px 0px 30px;
+    height: 400px;
+    width: 400px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 400px;
+    top: 600px;
+}
+
+.Bloc_4{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0px 30px 0px 30px;
+    height: 325px;
+    width: 325px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+    left: 1000px;
+    top: 800px;
+}
+
+.Image{
+    width: 100px;
+    height: 100px;
+}
+
+.Image_1{
+    width: 100px;
+    height: 100px;
+}

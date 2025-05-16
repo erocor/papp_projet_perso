@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Image+Audio-Projet-Personnel/122259-Gstaad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* <-- clé pour fixer le fond */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button{
+    background: linear-gradient(120deg, #04AA6D, #028a58); /* Vert foncé à plus foncé */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+  
+  .button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, #00ff99, #99ffdd, #00ff99); /* Dégradé vert clair */
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+  
+  .button:hover::before{
+    left: 100%;
+}
+  
+  .button:hover{
+    transform: scale(1.2);
+}
+  
+  /* Le texte du bouton au-dessus de l’effet */
+  .button span{
+    position: relative;
+    z-index: 1;
+}
+  
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Espace entre les blocs */
+    gap: 20px; /* Espace entre les blocs */
+    align-items: center; /* Aligne verticalement les blocs au centre */
+}
+
+.Bloc_1, .Bloc_2 {
+    background-color: white;
+    border-radius: 0px 30px 0px 30px;
+    height: 350px;
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.Bloc_1 {
+    margin-top: 100px; /* Espacement au-dessus de Bloc_1 */
+    margin-bottom: 40px; /* Espacement sous Bloc_1 */
+}
+
+.Bloc_2 {
+    margin-bottom: 40px; /* Espacement sous Bloc_2 */
+    margin-top: 100px; /* Espacement au-dessus de Bloc_1 */
+}
+
+.image-gallery img {
+    width: 325px;
+    height: 500px;
+    border: 2px solid green;
+    border-radius: 50px;
+    transition: transform 0.6s ease; /* Animation fluide et plus longue */
+    z-index: 1;
+    position: relative;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.2);
+    z-index: 10; /* Doit être supérieur à celui de .row */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 0; /* Ajoute de l'espace en haut et en bas */
+    position: relative;
+    z-index: 0;
+}
+
+img {
+    width: 325px;
+    height: 500px;
+    border: 2px solid green; /* Ajoute une bordure pour déboguer */
+    border-radius: 50px;
+}
+
+.row:nth-child(1),
+.row:nth-child(2),
+.row:nth-child(3),
+.row:nth-child(4) {
+    margin-top: 0;
+    margin-bottom: 0;
+}

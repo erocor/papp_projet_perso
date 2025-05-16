@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://www.etml.ch/storage/app/media/Batiment_Nord_jour-vertical.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    flex-direction: column;
+}
+
+.bouton{
+    background: linear-gradient(120deg, #04AA6D, #028a58); /* Vert foncé à plus foncé */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+  
+  .bouton::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, #00ff99, #99ffdd, #00ff99); /* Dégradé vert clair */
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+  
+  .bouton:hover::before{
+    left: 100%;
+}
+  
+  .bouton:hover{
+    transform: scale(1.2);
+}
+  
+  /* Le texte du bouton au-dessus de l’effet */
+  .bouton span{
+    position: relative;
+    z-index: 1;
+}
+
+.Bloc{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    border-radius: 50px 50px 50px 50px;
+    text-align: center;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin: 10px;
+    width: 80%; 
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.Connexion{
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    width: 100px;
+    margin-top: 25px;
+    transition: background-color 0.5s ease;
+}
+
+.Connexion:hover {
+  background-color: #45c69e;
+}
+
+.Icone{
+    width: 100px;
+    border-radius: 100%;
+}

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("Image+Audio-Projet-Personnel/entretien-professionnel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* <-- clé pour fixer le fond */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bouton {
+    background: linear-gradient(120deg, darkblue, navy);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Animation train qui passe */
+  .bouton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(120deg, #00f, #0ff, #00f);
+    transition: all 0.5s ease;
+    z-index: 0;
+  }
+  
+  /* Texte au-dessus de l'effet */
+  .bouton span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Survol : animation + zoom */
+  .bouton:hover::before {
+    left: 100%;
+  }
+  
+  .bouton:hover {
+    transform: scale(1.2);
+  }
+.Bloc_1 {
+    background-color: rgb(240, 240, 240);
+    border-radius: 0px 30px 0px 30px;
+    height: 350px;
+    width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 275px; /* Espacement au-dessus */
+    margin-left: auto; /* Centrage horizontal */
+    margin-right: auto; /* Centrage horizontal */
+    padding: 20px;
+}
